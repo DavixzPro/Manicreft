@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Minecraft</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <button id="cliqueinicial" onclick="startintro()"></button>
+        <h1 id="enchanted-text">Clique para jogar</h1>
+        <div id="intro">
+            <video src="video/WhatsApp Video 2025-08-19 at 20.50.55.mp4.mp4" id="introvd" paused></video>
+        </div>
+        <div id="overlay"></div>
+        <div id="paginainicio">
+            <button id="conquistas" onclick="minhasconquistas()"><img src="https://gamepedia.cursecdn.com/minecraft_gamepedia/b/b0/Potion_of_Slow_Falling.gif?version=6baa08ba1d2047bbe437b6e1e116e123" alt="Poção" width="70px"></button>
+            <div id="menuinicial">
+            <img src="img/minecraft_title.png" alt="Minecraft" width="900px" id="minecraft">
+            <button onclick="escolherdimensao()" id="jogar">Jogar</button>
+            <button onclick="pqmine()">Opções</button>
+            <button id="marketplace" onclick="ativarmarketplace()">Marketplace</button>
+        </div>
+        <p class="credito" id="credito1">Criador: Davi</p>
+        <p class="credito" id="credito2">Minecraft™</p>
+        <div id="personagem">
+            <h1 id="nome">Davi</h1>
+            <img src="img/Skins/steve.png" alt="Steve" width="130px" id="skinexibidanomenu">
+            <button id="skin" onclick="paginasobremim()">Skin</button>
+        </div>
+        <div id="posicaomsc">
+            <button id="msc"><img src="img/download-removebg-preview.png" alt="Audio" width="60px" id="icon-musica"></button>
+        </div>
+        </div>
+            <div id="sobremim">
+                <img src="img/fotominha.jpeg" alt="Minha Foto" width="250px" id="minhafoto">
+                <h1 style="position: absolute; top: 1%;">Quem sou eu?</h1>
+                <p style="flex: 1;" id="txtsobremim">Eu me chamo Davi, tenho 16 anos e atualmente estudo no 1° ano do Ensino Médio no SESI. No meu tempo livre, costumo estudar, programar ou praticar esportes. Também trabalho ajudando meus pais no comércio que temos em casa.</p>
+                <h1 style="position: absolute; top: 38%;">Objetivos:</h1>
+                <ul style="position: absolute; top: 47%; text-align: left;">
+                    <li>Dominar um segundo idioma</li>
+                    <li>Passar no ENEM ou SSA</li>
+                    <li>Viajar pra fora do Brasil</li>
+                </ul>
+                <h1 style="position: absolute; top: 67%;">Qualidades:</h1>
+                <ul style="position: absolute; top: 77%; text-align: left;">
+                    <li>Calmo</li>
+                    <li>Criativo</li>
+                    <li>Comunicativo</li>
+                </ul>
+                <button id="botaovoltarsm" onclick="voltardosm()" class="return">Retornar</button>
+        </div>
+        <div id="minhasconquistas">
+            <h1>Minhas Conquistas:</h1>
+                <img src="img/aprovacaosesi.png" alt="Aprovação no SESI" width="700px" style="border-radius: 7px;" class="conquista">
+                <img  src="img/aprovacaoete.png" alt="Aprovação no ETE" width="700px" style="border-radius: 7px;" class="conquista">
+                <img  src="img/conquistaOSM.png" alt="Medalha de Prata em Matemática" width="700px" style="border-radius: 7px;" class="conquista">
+            <button id="botaovoltarc" onclick="voltardasc()" class="return">Retornar</button>
+        </div>
+        <div id="opcoes">
+            <h1>Por que "Minecraft"?</h1>
+            <div id="txtpqm">
+                <p class="quadradopreto" style="color: white;">1º Ano - Overworld<br>A fase da descoberta. Tudo é novo como um mundo recém-gerado: os primeiros amigos são como vilarejos NPCs que encontramos pelo caminho, as matérias iniciais são como ferramentas básicas de madeira - frágeis, mas essenciais. Aqui se aprende que até mesmo os erros (como tentar minerar diamante com picareta de pedra) fazem parte do processo.<br><br>2º Ano - Nether<br>O momento da intensidade. Assim como no reino infernal do Minecraft, tudo parece mais difícil: a pressão aumenta como a temperatura do Nether, os desafios exigem equipamentos melhores (organização e disciplina), e os recursos são mais escassos (tempo e energia). Mas é justamente aqui que encontramos os materiais mais valiosos para nosso crescimento.<br><br>3º Ano - The End<br>A aparente fase final. Derrotar o Ender Dragon simboliza vencer os últimos obstáculos antes da formatura. Mas assim como no jogo, onde após o The End descobrimos as Cidades do End e os elytras que nos permitem voar, o fim do ensino médio é na verdade um portal para novos começos. A vitória sobre o dragão não é o fim - é a chave que liberta o jogador para explorar mundos muito maiores.</p>
+            </div>
+            <button id="voltardeopcoes" class="return" onclick="voltardopqm()">Retornar</button>
+        </div>
+        <div id="pageskins">
+            <div id="skinequipadaaviso">
+                <p>Skin equipada com sucesso!</p>
+            </div>
+            <div id="quadradonotopodomp">
+                <button class="return" id="voltardomp" onclick="voltardomp()"><</button>
+                <h1>Skins (minhas versões)</h1>
+                <div>
+                    <p id="qtdminecoins">999999 .</p>
+                    <img src="https://tomhmagiccreations.co.uk/wp-content/uploads/2023/10/minecoin.png" alt="Minecoin" id="minecoin">
+                </div>
+            </div>
+            <div id="containermenudeskins">
+            <button id="skin1" class="botoesdeskin" onclick="selectskin1()"><img src="img/Skins/skingratis.png" width="160px"></button>
+            <button id="skin2" class="botoesdeskin" onclick="selectskin2()"><img src="img/Skins/skindosesinepaeh.png" width="160px"></button>
+            <button id="skin3" class="botoesdeskin" onclick="selectskin3()"><img src="img/Skins/skinaventurero.png" width="160px"></button>
+            <button id="skin4" class="botoesdeskin" onclick="selectskin4()"><img src="img/Skins/skindogamer.png" width="160px"></button>
+            <button id="skin5" class="botoesdeskin" onclick="selectskin5()"><img src="img/Skins/skinhacker.png" width="160px"></button>
+            <button id="skin6" class="botoesdeskin" onclick="selectskin6()"><img src="img/Skins/skinrubikcube.png" width="160px"></button>
+            <button id="skin7" class="botoesdeskin" onclick="selectskin7()"><img src="img/Skins/engracadaomane.png" width="160px"></button>
+            <button id="skin8" class="botoesdeskin" onclick="selectskin8()"><img src="img/Skins/skinarumadin.png" width="160px"></button>
+            <button id="skin9" class="botoesdeskin" onclick="selectskin9()"><img src="img/Skins/skinyy.png" width="160px"></button>
+            <button id="skin10" class="botoesdeskin" onclick="selectskin10()"><img src="img/Skins/skindopintor.png" width="160px"></button>
+            <button id="skin11" class="botoesdeskin" onclick="selectskin11()"><img src="img/Skins/skintrader.png" width="160px"></button>
+            <button id="skin12" class="botoesdeskin" onclick="selectskin12()"><img src="img/Skins/skindocriativo.png" width="160px"></button>
+            </div>
+           <div id="sobreskin">
+            <h1 id="nickskin">Steve Clássico</h1>
+            <p id="descricaoskin" class="quadradopreto">Essa é a versão base, simples e direta, sem firulas. Me representa em meu estado natural, autêntico.</p>
+            <button style="position: absolute; top: 88.5%;" onclick="selecionarskin()">Selecionar Skin</button>
+            <video src="video/Skins/gifstevrodano.mp4" alt="Falha ao carregar Skin." width="200px" id="skinmenu" autoplay loop muted>
+           </div>
+        </div>
+        <div id="escolherdimensao">
+            <h1 style="text-align: center;">Selecione uma Dimensão:</h1>
+            <div class="quadradopreto">
+                <button id="d1" onclick="ativarfirst()" style="display: flex; justify-content: center; align-items: center;"><img src="img/portfolio 1.png" alt="Overworld" width="500px"></button>
+                <button id="d2" onclick="ativarsecond()" style="display: flex; justify-content: center; align-items: center;"><img src="img/GIF portfolio 2.gif" alt="Nether" width="500px"></button>
+                <button id="d3" onclick="ativarthird()" style="display: flex; justify-content: center; align-items: center;"><img src="img/GIF portfolio 3.gif" alt="The End" width="500px"></button>
+            </div>
+            <button onclick="voltardoed()" class="return" id="botaovoltared">Retornar</button>
+        </div>
+        <div id="primeiroano">
+            <div id="inventarioM" class="inventario">
+                <img src="img/inventory.jpeg" width="750px">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv1" onclick="showatvdM1()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv2" onclick="showatvdM2()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv3" onclick="showatvdM3()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv4" onclick="showatvdM4()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv5" onclick="showatvdM5()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv6" onclick="showatvdM6()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv7" onclick="showatvdM7()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv8" onclick="showatvdM8()">
+            </div>
+            <div id="inventarioL" class="inventario">
+                <img src="img/inventory.jpeg" width="750px">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv1" onclick="showatvdL1()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv2" onclick="showatvdL2()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv3" onclick="showatvdL3()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv4" onclick="showatvdL4()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv5" onclick="showatvdL5()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv6" onclick="showatvdL6()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv7" onclick="showatvdL7()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv8" onclick="showatvdL8()">
+            </div>
+            <div id="inventarioN" class="inventario">
+                <img src="img/inventory.jpeg" width="750px">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv1" onclick="showatvdN1()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv2" onclick="showatvdN2()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv3" onclick="showatvdN3()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv4" onclick="showatvdN4()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv5" onclick="showatvdN5()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv6" onclick="showatvdN6()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv7" onclick="showatvdN7()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv8" onclick="showatvdN8()">
+            </div>
+            <div id="inventarioH" class="inventario">
+                <img src="img/inventory.jpeg" width="750px">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv1" onclick="showatvdH1()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv2" onclick="showatvdH2()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv3" onclick="showatvdH3()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv4" onclick="showatvdH4()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv5" onclick="showatvdH5()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv6" onclick="showatvdH6()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv7" onclick="showatvdH7()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv8" onclick="showatvdH8()">
+            </div>
+            <div id="inventarioP" class="inventario">
+                <img src="img/inventory.jpeg" width="750px">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv1" onclick="showatvdP1()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv2" onclick="showatvdP2()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv3" onclick="showatvdP3()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv4" onclick="showatvdP4()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv5" onclick="showatvdP5()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv6" onclick="showatvdP6()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv7" onclick="showatvdP7()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv8" onclick="showatvdP8()">
+            </div>
+            <div id="inventarioS" class="inventario">
+                <img src="img/inventory.jpeg" width="750px">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv5" onclick="showatvdS5()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv6" onclick="showatvdS6()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv7" onclick="showatvdS7()">
+                <img src="img/livro.gif" alt="Atividade" class="livroatividade" id="atv8" onclick="showatvdS8()">
+            </div>
+            <div id="atividades">
+                <h2 id="tituloatvd">- Aula de Função -</h2>
+                <img src="img/Atividades/aulaquetsao.jpeg" id="fotoatvd">
+                <p id="descricaoatvd">Neste dia, eu e Wellyson explicamos uma questão da OBMEP no quadro.</p>
+            </div>
+            <div id="intro1">
+                <video src="video/introoverworld.mp4" id="introo" paused></video>
+            </div>
+            <div id="barrinhalateral">
+                <button id="blmt" class="botaobl" onclick="matematica()">Matemática<img src="https://www.pngkit.com/png/full/76-761550_minecraft-picture-minecraft-diamond-icon.png" id="iconemath" width="33px" onclick="matematica()"></button>
+                <button id="bllg" class="botaobl" onclick="linguagens()">Linguagens<img src="https://gamepedia.cursecdn.com/minecraft_br_gamepedia/thumb/8/85/Livro.png/150px-Livro.png?version=f50e594aff49991e76413b0a74e5a4f6" id="iconeling" onclick="linguagens()"></button>
+                <button id="blnz" class="botaobl"  onclick="natureza()">Natureza<img src="https://media.forgecdn.net/avatars/329/333/637454732466944230.png" id="iconecn" onclick="natureza()"></button>
+                <button id="blhm" class="botaobl" onclick="humanas()">Humanas<img src="https://gamepedia.cursecdn.com/minecraft_gamepedia/a/a3/Map_(item)_JE2_BE2.png?version=56ef702b83daf77505c469bf1a73083a" id="iconech" onclick="humanas()"></button>
+                <button id="blpv" class="botaobl" onclick="projvida()">Proj. Vida<img src="https://gamepedia.cursecdn.com/minecraft_br_gamepedia/8/8f/B%C3%BAssola.png?version=7347bd26ec8e41fbec766df531c642d4" id="iconepv" onclick="projvida()"></button>
+                <button id="blsn" class="botaobl" onclick="senai()">SENAI<img src="https://minecraft.wiki/images/thumb/Redstone_Dust_JE2_BE2.png/150px-Redstone_Dust_JE2_BE2.png?8cf17" id="iconesenai"  onclick="senai()"></button>
+            </div>
+            <div class="barrinhanotopo">
+                <h4>Portfólio Minecraft - Davi Amaral 1°A - Versão Overworld</h4>
+                <button onclick="voltardopa()" class="return" id="voltardopa" ><</button>
+            </div>
+        </div>
+
+        
+        <div id="segundoano">
+            <div id="intro2">
+                <video src="video/intronether.mp4" id="intron" paused></video>
+            </div>
+            <h1 class="caixadeconteudo">Sem recursos para continuar...</h1>
+            <button onclick="voltardosa()" class="return" id="voltardosa">x</button>
+        </div>
+
+
+        <div id="terceiroano">
+            <div id="intro3">
+                <video src="video/introend.mp4" id="introe" paused></video>
+            </div>
+            <h1 class="caixadeconteudo">Sem recursos para continuar...</h1>
+            <button onclick="voltardota()" class="return" id="voltardota">x</button>
+        </div>
+
+
+
+
+        <audio id="click" src="audio/minecraft_click (mp3cut.net).mp3"></audio>
+        <audio id="somtransicao1" src="audio/overworld.sound.effect.mp3"></audio>
+        <audio id="somtransicao2" src="audio/nether.sound.effect.mp3"></audio>
+        <audio id="somtransicao3" src="audio/end.sound.effect.mp3"></audio>
+        </body>
+</html>
