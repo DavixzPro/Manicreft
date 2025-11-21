@@ -150,13 +150,13 @@ document.getElementById("d3").addEventListener('click', function() {
    function selectskin3() {
   document.getElementById("skinmenu").src = "video/Skins/gifadventurer.mp4"
   document.getElementById("descricaoskin").innerText = "Essa skin representa a minha corajem e curiosidade sem limites. Mostra que eu encaro qualuqer desafio."
-  document.getElementById("nickskin").innerText = "titulo alterado"
+  document.getElementById("nickskin").innerText = "Steve Aventureiro"
  }
 
   function selectskin4() {
   document.getElementById("skinmenu").src = "video/Skins/gifgamer.mp4"
   document.getElementById("descricaoskin").innerText = "Com headset gamer e energia, essa skin representa a minha paixão por videogames e minha competitividade."
-  document.getElementById("nickskin").innerText = "titulo alterado"
+  document.getElementById("nickskin").innerText = "Steve Gamer"
  }
 
   function selectskin5() {
