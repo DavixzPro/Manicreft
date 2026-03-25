@@ -36,14 +36,15 @@
             <div id="sobremim">
                 <img src="img/fotominha.jpeg" alt="Minha Foto" width="250px" id="minhafoto">
                 <h1 style="position: absolute; top: 1%;">Quem sou eu?</h1>
-                <p style="flex: 1;" id="txtsobremim">Eu me chamo Davi, tenho 16 anos e atualmente estudo no 1° ano do Ensino Médio no SESI. No meu tempo livre, costumo estudar, programar ou praticar esportes. Também trabalho ajudando meus pais no comércio que temos em casa.</p>
+                <p style="flex: 1;" id="txtsobremim">Eu me chamo Davi, tenho 17 anos e atualmente estudo no 2° ano do Ensino Médio no SESI. No meu tempo livre, costumo estudar, programar ou praticar esportes. Também trabalho ajudando meus pais no comércio que temos em casa.</p>
                 <h1 style="position: absolute; top: 38%;">Objetivos:</h1>
                 <ul style="position: absolute; top: 47%; text-align: left;">
                     <li>Dominar um segundo idioma</li>
                     <li>Passar no ENEM ou SSA</li>
                     <li>Viajar pra fora do Brasil</li>
+                    <li>Finalizar meu jogo</li>
                 </ul>
-                <h1 style="position: absolute; top: 67%;">Qualidades:</h1>
+                <h1 style="position: absolute; top: 69.5%;">Qualidades:</h1>
                 <ul style="position: absolute; top: 77%; text-align: left;">
                     <li>Calmo</li>
                     <li>Criativo</li>
@@ -107,6 +108,9 @@
             </div>
             <button onclick="voltardoed()" class="return" id="botaovoltared">Retornar</button>
         </div>
+
+<!-- ----------------------------------------------------PRIMEIRO ANO--------------------------------------------------- -->
+ 
         <div id="primeiroano">
             <div id="inventarioM" class="inventario">
                 <img src="img/inventory.jpeg" width="750px">
@@ -192,15 +196,106 @@
             </div>
         </div>
 
+<!-- ----------------------------------------------------SEGUNDO ANO--------------------------------------------------- -->
         
         <div id="segundoano">
             <div id="intro2">
                 <video src="video/intronether.mp4" id="intron" paused></video>
             </div>
-            <h1 class="caixadeconteudo">Sem recursos para continuar...</h1>
-            <button onclick="voltardosa()" class="return" id="voltardosa">x</button>
+            <div id="backgroundsa">
+                <img src="img/steveheroico.png" alt="Choose one area" width="300px" id="stevenonether">
+                <div id="containericon1" onclick="mathpage()">
+                    <h1>Matemática</h1>
+                    <img src="img/icones2ano/moldura.png" alt="MAT" class="molduradosicone">
+                    <img src="img/icones2ano/wither-skeleton.jpg" alt="MAT" id="witherskelicon">
+                </div>
+                <div id="containericon2" onclick="lingpage()">
+                    <h1>Linguagens</h1>
+                    <img src="img/icones2ano/moldura.png" alt="LNG" class="molduradosicone">
+                    <img src="img/icones2ano/skeleton.png" alt="LNG" id="skeletonicon">
+                </div>
+                <div id="containericon3" onclick="natupage()">
+                    <h1>Natureza</h1>
+                    <img src="img/icones2ano/moldura.png" alt="NAT" class="molduradosicone">
+                    <img src="img/icones2ano/piglin.png" alt="NAT" id="piglinicon">
+                </div>
+                <div id="containericon4" onclick="humapage()">
+                    <h1>Humanas</h1>
+                    <img src="img/icones2ano/moldura.png" alt="HUM" class="molduradosicone">
+                    <img src="img/icones2ano/blaze.png" alt="HUM" id="blazeicon">
+                </div>
+                <div id="containericon5" onclick="senaipage()">
+                    <h1>SENAI</h1>
+                    <img src="img/icones2ano/moldura.png" alt="SENAI" class="molduradosicone">
+                    <img src="img/icones2ano/enderman.png" alt="SENAI" id="endermanicon">
+                </div>
+                <div id="containericon6" onclick="projpage()">
+                    <h1>Proj. Vida</h1>
+                    <img src="img/icones2ano/moldura.png" alt="PJV" class="molduradosicone">
+                    <img src="img/icones2ano/ghast.png" alt="PJV" id="ghasticon">
+                </div>
+                <button onclick="voltardosa()" class="return" id="voltardosa">x</button>
+            </div>
+            <div id="maps-interface">
+                <button onclick="voltardasatv()" class="return" id="voltardasatv">< </button>
+                <div id="unidades2ano">
+                    <div id="botoesmath">
+                        <button onclick="mathbim1()" id="1unidM" class="botoesunidades2ano">1°</button>
+                        <button onclick="mathbim2()" id="2unidM" class="botoesunidades2ano">2°</button>
+                        <button onclick="mathbim3()" id="3unidM" class="botoesunidades2ano">3°</button>
+                        <button onclick="mathbim4()" id="4unidM" class="botoesunidades2ano">4°</button>
+                    </div>
+                    <div id="botoesling">
+                        <button onclick="lingbim1()" id="1unidL" class="botoesunidades2ano">1°</button>
+                        <button onclick="lingbim2()" id="2unidL" class="botoesunidades2ano">2°</button>
+                        <button onclick="lingbim3()" id="3unidL" class="botoesunidades2ano">3°</button>
+                        <button onclick="lingbim4()" id="4unidL" class="botoesunidades2ano">4°</button>
+                    </div>
+                    <div id="botoesnatu">
+                        <button onclick="natubim1()" id="1unidN" class="botoesunidades2ano">1°</button>
+                        <button onclick="natubim2()" id="2unidN" class="botoesunidades2ano">2°</button>
+                        <button onclick="natubim3()" id="3unidN" class="botoesunidades2ano">3°</button>
+                        <button onclick="natubim4()" id="4unidN" class="botoesunidades2ano">4°</button>
+                    </div>
+                    <div id="botoeshuma">
+                        <button onclick="humabim1()" id="1unidH" class="botoesunidades2ano">1°</button>
+                        <button onclick="humabim2()" id="2unidH" class="botoesunidades2ano">2°</button>
+                        <button onclick="humabim3()" id="3unidH" class="botoesunidades2ano">3°</button>
+                        <button onclick="humabim4()" id="4unidH" class="botoesunidades2ano">4°</button>
+                    </div>
+                    <div id="botoessenai">
+                        <button onclick="senaibim1()" id="1unidS" class="botoesunidades2ano">1°</button>
+                        <button onclick="senaibim2()" id="2unidS" class="botoesunidades2ano">2°</button>
+                        <button onclick="senaibim3()" id="3unidS" class="botoesunidades2ano">3°</button>
+                        <button onclick="senaibim4()" id="4unidS" class="botoesunidades2ano">4°</button>
+                    </div>
+                    <div id="botoesproj">
+                        <button onclick="projbim1()" id="1unidP" class="botoesunidades2ano">1°</button>
+                        <button onclick="projbim2()" id="2unidP" class="botoesunidades2ano">2°</button>
+                        <button onclick="projbim3()" id="3unidP" class="botoesunidades2ano">3°</button>
+                        <button onclick="projbim4()" id="4unidP" class="botoesunidades2ano">4°</button>
+                    </div>
+                </div>
+                <div id="atividades2">
+                    <h2 id="tituloatvd2">Title</h2>
+                    <img id="fotoatvd2">
+                    <p id="descricaoatvd2">Description</p>
+                </div>
+                <div id="atividades22">
+                    <h2 id="tituloatvd22">Title</h2>
+                    <img id="fotoatvd22">
+                    <p id="descricaoatvd22">Description</p>
+                </div>
+            </div>
+    
+            <div class="barrinhaembaixo">
+                <p id="txt1">Portfólio - Davi</p>
+                <img src="img/HUD.png" id="hud-nether" alt="Internet ruim mermão">
+                <p id="txt2">2°A - Versão Nether </p>
+            </div>
         </div>
 
+<!-- ----------------------------------------------------TERCEIRO ANO--------------------------------------------------- -->
 
         <div id="terceiroano">
             <div id="intro3">

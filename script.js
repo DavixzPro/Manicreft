@@ -670,6 +670,12 @@ function selecionarskin() {
     document.getElementById("descricaoatvd").innerText = "Essa foi uma redação sobre mim, contando um pouco sobre minhas aspirações."
   }
 
+  
+
+  //===========================================================================================================
+
+
+
 function ativarsecond() {                                                                        //Segundo  Ano
     document.getElementById("paginainicio").style.display = "none"
     document.getElementById("escolherdimensao").style.display = "none"
@@ -682,8 +688,8 @@ function ativarsecond() {                                                       
 
     intron.addEventListener("ended", function() {
     document.getElementById("intro2").style.display = "none"
-    document.body.style.backgroundImage = "url(https://tse4.mm.bing.net/th/id/OIP.GPMixuK3UsK0avPq0-l89AHaEK?rs=1&pid=ImgDetMain&o=7&rm=3)"
-    document.getElementById("overlay").style.backgroundColor ="rgba(0,0,0,0.4)"
+    document.body.style.animation = "none"
+    document.getElementById("overlay").style.backgroundColor ="rgb(0, 0, 0)"
     document.getElementById("voltardosa").style.display = "flex"
     });
   }
@@ -691,8 +697,423 @@ function ativarsecond() {                                                       
   function voltardosa() {
     document.getElementById("segundoano").style.display = "none"
     document.getElementById("escolherdimensao").style.display = "flex"
-    document.body.style.backgroundImage = "url(https://images7.alphacoders.com/418/418742.jpg)";
+    document.getElementById("overlay").style.backgroundColor ="rgba(0, 0, 0, 0.4)"
+    document.body.style.animation = "deslizarfundo 20s ease-in-out infinite"
   }
+
+
+function mathpage() {
+  document.getElementById("backgroundsa").style.display = "none"
+  document.getElementById("maps-interface").style.display = "flex"
+  document.getElementById("maps-interface").style.backgroundImage = "url(img/backrgounds/wither.jpg)"
+  document.getElementById("botoesmath").style.display = "flex"
+  document.getElementById("botoesling").style.display = "none"
+  document.getElementById("botoesnatu").style.display = "none"
+  document.getElementById("botoeshuma").style.display = "none"
+  document.getElementById("botoessenai").style.display = "none"
+  document.getElementById("botoesproj").style.display = "none"
+  mathbim1()
+}
+
+function mathbim1() {
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/quizdelog.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Quiz de Log"
+  document.getElementById("descricaoatvd2").innerText = "Esse foi um quiz apenas sobre logarítmos e suas propriedades, atividade essencial para aprimorar habilidades."
+
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/canguru.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Olimpíada Canguru"
+  document.getElementById("descricaoatvd22").innerText = "Essa foi a Olimpíada Canguru, onde pudemos aprender como funciona uma olimpíada científica na prática."
+  document.getElementById("1unidM").style.backgroundColor = "green"
+  document.getElementById("2unidM").style.backgroundColor = "gray"
+  document.getElementById("3unidM").style.backgroundColor = "gray"
+  document.getElementById("4unidM").style.backgroundColor = "gray"
+}
+function mathbim2() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidM").style.backgroundColor = "gray"
+  document.getElementById("2unidM").style.backgroundColor = "green"
+  document.getElementById("3unidM").style.backgroundColor = "gray"
+  document.getElementById("4unidM").style.backgroundColor = "gray"
+}
+function mathbim3() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidM").style.backgroundColor = "gray"
+  document.getElementById("2unidM").style.backgroundColor = "gray"
+  document.getElementById("3unidM").style.backgroundColor = "green"
+  document.getElementById("4unidM").style.backgroundColor = "gray"
+}
+function mathbim4() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidM").style.backgroundColor = "gray"
+  document.getElementById("2unidM").style.backgroundColor = "gray"
+  document.getElementById("3unidM").style.backgroundColor = "gray"
+  document.getElementById("4unidM").style.backgroundColor = "green"
+}
+
+function lingpage() {
+  document.getElementById("backgroundsa").style.display = "none"
+  document.getElementById("maps-interface").style.display = "flex"
+  document.getElementById("maps-interface").style.backgroundImage = "url(img/backrgounds/esqueleto.jpg)"
+  document.getElementById("botoesmath").style.display = "none"
+  document.getElementById("botoesling").style.display = "flex"
+  document.getElementById("botoesnatu").style.display = "none"
+  document.getElementById("botoeshuma").style.display = "none"
+  document.getElementById("botoessenai").style.display = "none"
+  document.getElementById("botoesproj").style.display = "none"
+  lingbim1()
+}
+
+function lingbim1() {
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/immediatefuture.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Tempos Verbais"
+  document.getElementById("descricaoatvd2").innerText = "Neste trabalho, apresentamos, em grupo, sobre o tempo verbal 'Immediate Future'."
+
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/resenhacriticamacunaima.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Resenha Crítica"
+  document.getElementById("descricaoatvd22").innerText = "Essa foi uma produção de texto em forma de resenha crítica sobre o a obra 'Macunaíma'."
+  document.getElementById("1unidL").style.backgroundColor = "green"
+  document.getElementById("2unidL").style.backgroundColor = "gray"
+  document.getElementById("3unidL").style.backgroundColor = "gray"
+  document.getElementById("4unidL").style.backgroundColor = "gray"
+}
+function lingbim2() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidL").style.backgroundColor = "gray"
+  document.getElementById("2unidL").style.backgroundColor = "green"
+  document.getElementById("3unidL").style.backgroundColor = "gray"
+  document.getElementById("4unidL").style.backgroundColor = "gray"
+}
+
+function lingbim3() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidL").style.backgroundColor = "gray"
+  document.getElementById("2unidL").style.backgroundColor = "gray"
+  document.getElementById("3unidL").style.backgroundColor = "green"
+  document.getElementById("4unidL").style.backgroundColor = "gray"
+}
+function lingbim4() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidL").style.backgroundColor = "gray"
+  document.getElementById("2unidL").style.backgroundColor = "gray"
+  document.getElementById("3unidL").style.backgroundColor = "gray"
+  document.getElementById("4unidL").style.backgroundColor = "green"
+}
+
+function natupage() {
+  document.getElementById("backgroundsa").style.display = "none"
+  document.getElementById("maps-interface").style.display = "flex"
+  document.getElementById("maps-interface").style.backgroundImage = "url(img/backrgounds/piglin.jpg)"
+  document.getElementById("botoesmath").style.display = "none"
+  document.getElementById("botoesling").style.display = "none"
+  document.getElementById("botoesnatu").style.display = "flex"
+  document.getElementById("botoeshuma").style.display = "none"
+  document.getElementById("botoessenai").style.display = "none"
+  document.getElementById("botoesproj").style.display = "none"
+  natubim1()
+}
+
+function natubim1() {
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/cruzadinhabiologia.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Cruzadinha"
+  document.getElementById("descricaoatvd2").innerText = "Nesta atividade, fizemos uma cruzadinha com conteúdos referentes à biologia básica do ensino médio."
+
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/mapamentalcalor.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Termodinâmica"
+  document.getElementById("descricaoatvd22").innerText = "Esse foi um mapa mental onde exploramos os principais conceitos da termodinâmica e suas aplicações."
+  document.getElementById("1unidN").style.backgroundColor = "green"
+  document.getElementById("2unidN").style.backgroundColor = "gray"
+  document.getElementById("3unidN").style.backgroundColor = "gray"
+  document.getElementById("4unidN").style.backgroundColor = "gray"
+}
+function natubim2() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidN").style.backgroundColor = "gray"
+  document.getElementById("2unidN").style.backgroundColor = "green"
+  document.getElementById("3unidN").style.backgroundColor = "gray"
+  document.getElementById("4unidN").style.backgroundColor = "gray"
+}
+function natubim3() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidN").style.backgroundColor = "gray"
+  document.getElementById("2unidN").style.backgroundColor = "gray"
+  document.getElementById("3unidN").style.backgroundColor = "green"
+  document.getElementById("4unidN").style.backgroundColor = "gray"
+}
+function natubim4() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidN").style.backgroundColor = "greay"
+  document.getElementById("2unidN").style.backgroundColor = "gray"
+  document.getElementById("3unidN").style.backgroundColor = "gray"
+  document.getElementById("4unidN").style.backgroundColor = "green"
+}
+
+function humapage() {
+  document.getElementById("backgroundsa").style.display = "none"
+  document.getElementById("maps-interface").style.display = "flex"
+  document.getElementById("maps-interface").style.backgroundImage = "url(img/backrgounds/blaze.jpg)"
+  document.getElementById("botoesmath").style.display = "none"
+  document.getElementById("botoesling").style.display = "none"
+  document.getElementById("botoesnatu").style.display = "none"
+  document.getElementById("botoeshuma").style.display = "flex"
+  document.getElementById("botoessenai").style.display = "none"
+  document.getElementById("botoesproj").style.display = "none"
+  humabim1()
+}
+
+function humabim1() {
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/povosoriginarios.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Povos Originários"
+  document.getElementById("descricaoatvd2").innerText = "Esse foi um trabalho de cências humanas, onde fizemos uma dramatização sobre os povos indígenas."
+  document.getElementById("1unidN").style.backgroundColor = "green"
+  document.getElementById("2unidN").style.backgroundColor = "gray"
+  document.getElementById("3unidN").style.backgroundColor = "gray"
+  document.getElementById("4unidN").style.backgroundColor = "gray"
+
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/independenciapquem.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Constituição-1824"
+  document.getElementById("descricaoatvd22").innerText = "Neste projeto, meu grupo fez uma apresentação teatral com tema 'Independência pra quem?'."
+  document.getElementById("1unidH").style.backgroundColor = "green"
+  document.getElementById("2unidH").style.backgroundColor = "gray"
+  document.getElementById("3unidH").style.backgroundColor = "gray"
+  document.getElementById("4unidH").style.backgroundColor = "gray"
+}
+function humabim2() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidH").style.backgroundColor = "gray"
+  document.getElementById("2unidH").style.backgroundColor = "green"
+  document.getElementById("3unidH").style.backgroundColor = "gray"
+  document.getElementById("4unidH").style.backgroundColor = "gray"
+}
+function humabim3() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidH").style.backgroundColor = "gray"
+  document.getElementById("2unidH").style.backgroundColor = "gray"
+  document.getElementById("3unidH").style.backgroundColor = "green"
+  document.getElementById("4unidH").style.backgroundColor = "gray"
+}
+function humabim4() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidH").style.backgroundColor = "gray"
+  document.getElementById("2unidH").style.backgroundColor = "gray"
+  document.getElementById("3unidH").style.backgroundColor = "gray"
+  document.getElementById("4unidH").style.backgroundColor = "green"
+}
+
+function senaipage() {
+  document.getElementById("backgroundsa").style.display = "none"
+  document.getElementById("maps-interface").style.display = "flex"
+  document.getElementById("maps-interface").style.backgroundImage = "url(img/backrgounds/enderman.jpg)"
+  document.getElementById("botoesmath").style.display = "none"
+  document.getElementById("botoesling").style.display = "none"
+  document.getElementById("botoesnatu").style.display = "none"
+  document.getElementById("botoeshuma").style.display = "none"
+  document.getElementById("botoessenai").style.display = "flex"
+  document.getElementById("botoesproj").style.display = "none"
+  senaibim1()
+}
+
+function senaibim1() {
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/paulfoulstad.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Circuito Simulado"
+  document.getElementById("descricaoatvd2").innerText = "Nesse dia, fomos ao laboratório de informática para realizar simulações virtuais de circuitos."
+
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/eletroeletronica.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Eletroeletrônica"
+  document.getElementById("descricaoatvd22").innerText = "Nesse dia, visitamos o laboratório de eletroeletrônica, onde conhecemos ferramentas usadas na indústria."
+  document.getElementById("1unidS").style.backgroundColor = "green"
+  document.getElementById("2unidS").style.backgroundColor = "gray"
+  document.getElementById("3unidS").style.backgroundColor = "gray"
+  document.getElementById("4unidS").style.backgroundColor = "gray"
+}
+function senaibim2() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidS").style.backgroundColor = "gray"
+  document.getElementById("2unidS").style.backgroundColor = "green"
+  document.getElementById("3unidS").style.backgroundColor = "gray"
+  document.getElementById("4unidS").style.backgroundColor = "gray"
+}
+function senaibim3() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidS").style.backgroundColor = "gray"
+  document.getElementById("2unidS").style.backgroundColor = "gray"
+  document.getElementById("3unidS").style.backgroundColor = "green"
+  document.getElementById("4unidS").style.backgroundColor = "gray"
+}
+function senaibim4() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidS").style.backgroundColor = "gray"
+  document.getElementById("2unidS").style.backgroundColor = "gray"
+  document.getElementById("3unidS").style.backgroundColor = "gray"
+  document.getElementById("4unidS").style.backgroundColor = "green"
+}
+
+function projpage() {
+  document.getElementById("backgroundsa").style.display = "none"
+  document.getElementById("maps-interface").style.display = "flex"
+  document.getElementById("maps-interface").style.backgroundImage = "url(img/backrgounds/ghast.jpg)"
+  document.getElementById("botoesmath").style.display = "none"
+  document.getElementById("botoesling").style.display = "none"
+  document.getElementById("botoesnatu").style.display = "none"
+  document.getElementById("botoeshuma").style.display = "none"
+  document.getElementById("botoessenai").style.display = "none"
+  document.getElementById("botoesproj").style.display = "flex"
+  projbim1()
+}
+
+function projbim1() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = "Estações"
+  document.getElementById("descricaoatvd2").innerText = "Nesta atividade, relacionamos as estações do ano às etapas da juventude."
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = "Planejamento"
+  document.getElementById("descricaoatvd22").innerText = "Esse foi um site desenvolvido pelo grupo, onde citamos nossas metas, prazos e companhias."
+  document.getElementById("1unidP").style.backgroundColor = "green"
+  document.getElementById("2unidP").style.backgroundColor = "gray"
+  document.getElementById("3unidP").style.backgroundColor = "gray"
+  document.getElementById("4unidP").style.backgroundColor = "gray"
+}
+function projbim2() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidP").style.backgroundColor = "gray"
+  document.getElementById("2unidP").style.backgroundColor = "green"
+  document.getElementById("3unidP").style.backgroundColor = "gray"
+  document.getElementById("4unidP").style.backgroundColor = "gray"
+}
+function projbim3() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidP").style.backgroundColor = "gray"
+  document.getElementById("2unidP").style.backgroundColor = "gray"
+  document.getElementById("3unidP").style.backgroundColor = "green"
+  document.getElementById("4unidP").style.backgroundColor = "gray"
+}
+function projbim4() {
+  document.getElementById("fotoatvd2").src = ""
+  document.getElementById("tituloatvd2").innerText = ""
+  document.getElementById("descricaoatvd2").innerText = ""
+
+  document.getElementById("fotoatvd22").src = ""
+  document.getElementById("tituloatvd22").innerText = ""
+  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("1unidP").style.backgroundColor = "gray"
+  document.getElementById("2unidP").style.backgroundColor = "gray"
+  document.getElementById("3unidP").style.backgroundColor = "gray"
+  document.getElementById("4unidP").style.backgroundColor = "green"
+}
+
+function voltardasatv() {
+  document.getElementById("backgroundsa").style.display = "flex"
+  document.getElementById("maps-interface").style.display = "none"
+  document.getElementById("maps-interface").style.backgroundImage = "url(img/fundonether.jpeg)"
+}
+
+
+
+//============================================================================================================
+
+
 
   function ativarthird() {                                                                        //Terceiro  Ano
     document.getElementById("paginainicio").style.display = "none"
