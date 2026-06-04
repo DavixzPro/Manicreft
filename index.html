@@ -11,7 +11,7 @@
         <button id="cliqueinicial" onclick="startintro()"></button>
         <h1 id="enchanted-text">Clique para jogar</h1>
         <div id="intro">
-            <video src="video/WhatsApp Video 2025-08-19 at 20.50.55.mp4.mp4" id="introvd" paused></video>
+            <video src="video/intro" id="introvd" paused></video>
         </div>
         <div id="overlay"></div>
         <div id="paginainicio">
@@ -36,7 +36,7 @@
             <div id="sobremim">
                 <h1 id="titlesobremim"><u>Sobre Mim</u></h1>
                 <div id="whoisme"><p>Eu me chamo Davi Amaral, tenho 17 anos e atualmente estudo no segundo ano do ensino médio no SESI, enquanto também curso Automação Industrial no SENAI. Na casa dos meus pais tem um ponto comercial, onde eu trabalho ajudando eles em diferentes tarefas. No meu tempo livre, costumo trabalhar em projetos pessoais, estudar, praticar esportes ou jogar videogames.</p></div>
-                <div id="goals"><p>Meus objetivos estão relacionados não só ao meu desenvolvimento acadêmico e técnico, mas também pessoal. Busco aproveitar as oportunidades de aprendizado para adquirir novos conhecimentos, desenvolver habilidades e me preparar para desafios futuros.<ul style="text-align: left;"><li>Viajar para outro país;</li><li>Atingir a fluência em inglês;</li><li>Finalizar meu jogo;</li><li>Cursar faculdade de tecnologia.</li></ul></p></div>
+                <div id="goals"><p>Meus objetivos estão relacionados não só ao meu desenvolvimento acadêmico, mas também pessoal. Busco aproveitar as oportunidades de aprendizado para adquirir novos conhecimentos, desenvolver habilidades e me preparar para desafios futuros.<ul style="text-align: left;"><li>Viajar para outro país;</li><li>Atingir a fluência em inglês;</li><li>Finalizar meu jogo;</li><li>Cursar faculdade de tecnologia.</li></ul></p></div>
                 <div id="qualities"><p>Ao longo da minha trajetória escolar e dos meus projetos, procurei construir algumas qualidades que considero importantes tanto para o aprendizado quanto para o desenvolvimento pessoal. Acredito que essas características me ajudam a enfrentar desafios e evoluir constantemente.</p><ul style="text-align: left;"><li>Calmo;</li><li>Criativo;</li><li>Proativo;</li><li>Comunicativo.</li></ul></div>
                 <div id="opcoessobremim">
                     <button id="quemsoueu" class="botao-opcoes-sobremim" onclick="whoisme()">Quem sou eu?</button>
@@ -53,6 +53,7 @@
                 <img  src="img/aprovacaoete.png" alt="Aprovação no ETE" class="conquista" id="conq2" onmouseover="mostrarc2()" onmouseout="sairc2()">
                 <img  src="img/conquistaOSM.png" alt="Medalha de Prata em Matemática" id="conq3" class="conquista" onmouseover="mostrarc3()" onmouseout="sairc3()">
                 <img src="img/cursodepython.png" alt="Curso de Python" id="conq4" class="conquista" onmouseover="mostrarc4()" onmouseout="sairc4()">
+                <img src="img/passeinarobotica.png" alt="Passei na CodeTECH" id="conq5" class="conquista" onmouseover="mostrarc5()" onmouseout="sairc5()">
                 <div id="comprovantedasconquistas">
                     <h2 id="titleconq">Passe o cursor sobre a conquista para ver mais sobre ela</h2>
                     <img src="" id="imgconq">
@@ -235,7 +236,7 @@
                     <img src="img/icones2ano/ghast.png" alt="PJV" id="ghasticon">
                 </div>
                 <div id="containericon7" onclick="codepage()">
-                    <h1>FTC</h1>
+                    <h1>CodeTECH</h1>
                     <img src="img/icones2ano/moldura.png" alt="CODETECH" class="molduradosicone">
                     <img src="img/icones2ano/magmacube.jpg" alt="CODETECH" id="magmacubeicon">
                 </div>
@@ -312,12 +313,13 @@
             <div id="intro3">
                 <video src="video/introend.mp4" id="introe" paused></video>
             </div>
-            <h1 class="caixadeconteudo">Sem recursos para continuar...</h1>
+            <h1 class="caixadeconteudo">Dimensão ainda não desbloqueada</h1>
             <button onclick="voltardota()" class="return" id="voltardota">x</button>
         </div>
 
 
-        <audio id="click" src="audio/minecraft_click (mp3cut.net).mp3"></audio>
+        <!-- --------------------------------------------CONFIGURAÇÕES--------------------------------------------------- -->
+        <audio id="click" src="audio/click.mp3"></audio>
         <audio id="somtransicao1" src="audio/overworld.sound.effect.mp3"></audio>
         <audio id="somtransicao2" src="audio/nether.sound.effect.mp3"></audio>
         <audio id="somtransicao3" src="audio/end.sound.effect.mp3"></audio>
