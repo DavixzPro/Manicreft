@@ -119,7 +119,7 @@ function qualities() {
   }
 
   function mostrarc1() {
-    document.getElementById("imgconq").src = ""
+    document.getElementById("imgconq").src = "img/Atividades2.0/fotodogrupin.jpeg"
     document.getElementById("titleconq").innerText = "Aprovação no SESI Cabo, para Automação Industrial"
   }
   function sairc1() {
@@ -151,8 +151,8 @@ function qualities() {
     document.getElementById("titleconq").innerText = ""
   }
   function mostrarc5() {
-    document.getElementById("imgconq").src = "img/Atovidades2.0/programandorobo.jpeg"
-    document.getElementById("titleconq").innerText = "Fui aprovado no processo seletivo da equipe"
+    document.getElementById("imgconq").src = "img/Atividades2.0/programandorobo.jpeg"
+    document.getElementById("titleconq").innerText = "Aprovado no processo seletivo da equipe"
   }
   function sairc5() {
     document.getElementById("imgconq").src = ""
@@ -785,19 +785,19 @@ function mathpage() {
 
 function mathbim1() {
   document.getElementById("fotoatvd2").src = "img/Atividades2.0/quizdelog.jpeg"
-  document.getElementById("tituloatv22").innerText = "Quiz de Log"
-  document.getElementById("descricaoatvd2").innerText = "Esse foi um quiz apenas sobre logarítmos e suas propriedades, atividade essencial para aprimorar habilidades."
+  document.getElementById("tituloatvd2").innerText = "Quiz de Log"
+  document.getElementById("descricaoatvd2").innerText = "Esse foi um quiz online sobre as propriedades dos logarítmos."
 
   document.getElementById("fotoatvd22").src = "img/Atividades2.0/canguru.jpeg"
-  document.getElementById("tituloatv22").innerText = "Olimpíada Canguru"
-  document.getElementById("descricaoatvd22").innerText = "Essa foi a Olimpíada Canguru, onde pudemos aprender como funciona uma olimpíada científica na prática."
+  document.getElementById("tituloatvd22").innerText = "Canguru"
+  document.getElementById("descricaoatvd22").innerText = "Neste dia, fizemos a olimpíada canguru de mamemática, onde pudemos testar nossos conhecimentos."
   document.getElementById("1unidM").style.backgroundColor = "green"
-  document.getElementById("2unidM").style.backgroundColor = "gray"
+  document.getElementById("2unidM").style.backgroundColor = "gray "
   document.getElementById("3unidM").style.backgroundColor = "gray"
   document.getElementById("4unidM").style.backgroundColor = "gray"
 }
 function mathbim2() {
-  document.getElementById("fotoatvd2").src = "img/Atividades2.0/empresademath.png"
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/empresademath.jpeg"
   document.getElementById("tituloatvd2").innerText = "Empresa"
   document.getElementById("descricaoatvd2").innerText = "Neste projeto, o desafio foi criar uma empresa onde conhecimentos de matemática financeira pudessem ser aplicados."
 
@@ -869,7 +869,7 @@ function lingbim2() {
   document.getElementById("descricaoatvd2").innerText = "Nesta atividade, apresentamos sobre o 'Equilibrismo', onde mostramos a parte teórica e prática."
 
   document.getElementById("fotoatvd22").src = "img/Atividades2.0/erreiquestao.jpeg"
-  document.getElementById("tituloatvd22").innerText = "Resolução de Questão"
+  document.getElementById("tituloatvd22").innerText = "Resoluções"
   document.getElementById("descricaoatvd22").innerText = "Nesse dia, o professor Eudes colocou questões no quadro e pediu para que os alunos resolvessem."
   document.getElementById("1unidL").style.backgroundColor = "gray"
   document.getElementById("2unidL").style.backgroundColor = "green"
@@ -1139,11 +1139,11 @@ function projbim1() {
 function projbim2() {
   document.getElementById("fotoatvd2").src = "img/Atividades2.0/antissocial.jpeg"
   document.getElementById("tituloatvd2").innerText = "Conexões"
-  document.getElementById("descricaoatvd2").innerText = "Neste dia, realizamos um debate sobre estabelecer conexões"
+  document.getElementById("descricaoatvd2").innerText = "Neste dia, realizamos um debate sobre estabelecer conexões e como elas influenciam."
 
-  document.getElementById("fotoatvd22").src = "img/Atividades2.0/musico.jpeg"
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/musicos.jpeg"
   document.getElementById("tituloatvd22").innerText = "Músicos"
-  document.getElementById("descricaoatvd22").innerText = "NEssa aula, o professor pediu para que dois alunos cantassem algumas músicas e falassem sobre a mensagem que ela passa."
+  document.getElementById("descricaoatvd22").innerText = "Nessa aula, o professor pediu para que dois alunos cantassem algumas músicas e falassem sobre a mensagem que elas passam."
   document.getElementById("1unidP").style.backgroundColor = "gray"
   document.getElementById("2unidP").style.backgroundColor = "green"
   document.getElementById("3unidP").style.backgroundColor = "gray"
