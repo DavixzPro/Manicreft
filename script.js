@@ -119,7 +119,7 @@ function qualities() {
   }
 
   function mostrarc1() {
-    document.getElementById("imgconq").src = "img/Atividades2.0/fotodogrupin.jpeg"
+    document.getElementById("imgconq").src = "img/Conquistas/entreinosesi.jpeg"
     document.getElementById("titleconq").innerText = "Aprovação no SESI Cabo, para Automação Industrial"
   }
   function sairc1() {
@@ -151,7 +151,7 @@ function qualities() {
     document.getElementById("titleconq").innerText = ""
   }
   function mostrarc5() {
-    document.getElementById("imgconq").src = "img/Atividades2.0/programandorobo.jpeg"
+    document.getElementById("imgconq").src = "img/Conquistas/primeirotreinonacode.jpeg"
     document.getElementById("titleconq").innerText = "Aprovado no processo seletivo da equipe"
   }
   function sairc5() {
@@ -1193,11 +1193,11 @@ function codepage() {
 function codebim1() {
   document.getElementById("fotoatvd2").src = "img/Atividades2.0/ftcsim.jpeg"
   document.getElementById("tituloatvd2").innerText = "Seletiva"
-  document.getElementById("descricaoatvd2").innerText = "Essa foi uma simulação digital do robô usado em competições de FTC."
+  document.getElementById("descricaoatvd2").innerText = "Essa foi a etapa da simulação digital do robô que ia usado em competições de FTC."
 
-  document.getElementById("fotoatvd22").src = ""
-  document.getElementById("tituloatvd22").innerText = ""
-  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/montagemdorobo.jpeg"
+  document.getElementById("tituloatvd22").innerText = "StormBreaker"
+  document.getElementById("descricaoatvd22").innerText = "Nos primeiros dias de treino, iniciamos a montagem do protótipo do robô que irá ser usado nas competições."
   document.getElementById("1unidC").style.backgroundColor = "green"
   document.getElementById("2unidC").style.backgroundColor = "gray"
   document.getElementById("3unidC").style.backgroundColor = "gray"
