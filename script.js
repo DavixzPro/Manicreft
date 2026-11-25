@@ -62,39 +62,69 @@ document.getElementById("d3").addEventListener('click', function() {
       });
   });
 
+  const cronometro = document.getElementById("cronometro");
+const barra = document.getElementById("arrastar");
+
+let arrastando = false;
+let offsetX, offsetY;
+
+barra.addEventListener("mousedown", (e) => {
+    arrastando = true;
+
+    offsetX = e.clientX - cronometro.offsetLeft;
+    offsetY = e.clientY - cronometro.offsetTop;
+});
+
+document.addEventListener("mousemove", (e) => {
+    if (!arrastando) return;
+
+    cronometro.style.left = (e.clientX - offsetX) + "px";
+    cronometro.style.top = (e.clientY - offsetY) + "px";
+});
+
+document.addEventListener("mouseup", () => {
+    arrastando = false;
+});
+
+let segundos = 0;
+let intervalo = null;
+
+function atualizarTela() {
+    let minutos = Math.floor(segundos / 60);
+    let seg = segundos % 60;
+
+    document.getElementById("timer").innerText =
+        String(minutos).padStart(2, '0') + ":" +
+        String(seg).padStart(2, '0');
+}
+
+function iniciar() {
+    if (intervalo !== null) return;
+
+    intervalo = setInterval(() => {
+        segundos++;
+        atualizarTela();
+    }, 1000);
+}
+
+function pausar() {
+    clearInterval(intervalo);
+    intervalo = null;
+}
+
+function reiniciar() {
+    pausar();
+    segundos = 0;
+    atualizarTela();
+}
+
 
   function paginasobremim() {
     document.getElementById("sobremim").style.display = "flex"                                     // Sobre Mim
     document.getElementById("paginainicio").style.display = "none"
-    whoisme()
 
     document.getElementById("overlay").style.backgroundColor = "rgba(0,0,0,0.3)"  
   }
-
-function whoisme() {
-  document.getElementById("quemsoueu").style.backgroundColor = "green"
-  document.getElementById("metas").style.backgroundColor = "gray"
-  document.getElementById("cualidades").style.backgroundColor = "gray"
-  document.getElementById("whoisme").style.display = "flex"
-  document.getElementById("goals").style.display = "none"
-  document.getElementById("qualities").style.display = "none"
-}
-function goals() {
-  document.getElementById("quemsoueu").style.backgroundColor = "gray"
-  document.getElementById("metas").style.backgroundColor = "green"
-  document.getElementById("cualidades").style.backgroundColor = "gray"
-  document.getElementById("whoisme").style.display = "none"
-  document.getElementById("goals").style.display = "flex"
-  document.getElementById("qualities").style.display = "none"
-}
-function qualities() {
-  document.getElementById("quemsoueu").style.backgroundColor = "gray"
-  document.getElementById("metas").style.backgroundColor = "gray"
-  document.getElementById("cualidades").style.backgroundColor = "green"
-  document.getElementById("whoisme").style.display = "none"
-  document.getElementById("goals").style.display = "none"
-  document.getElementById("qualities").style.display = "flex"
-}
 
   function voltardosm() {
     document.getElementById("paginainicio").style.display = "flex"   
@@ -102,6 +132,26 @@ function qualities() {
 
     document.getElementById("overlay").style.backgroundColor = "rgba(255, 255, 255, 0)" 
   }
+
+
+const imagensCarrossel = [
+    "img/Eu/euComMeuAmor.jpeg",
+    "img/Atividades/microscopio.jpeg",
+    "img/Eu/trioParadaDURA.jpeg",
+    "img/Eu/euDeCostas.jpeg",
+    "img/Eu/myphoto.jpeg",
+    "img/Eu/euComControle.jpeg"
+];
+
+const imagem = document.getElementById("carousel-image");
+
+let indiceAtual = 0;
+
+setInterval(() => {
+    indiceAtual = (indiceAtual + 1) % imagensCarrossel.length;
+     imagem.src = imagensCarrossel[indiceAtual];
+    }, 3500);
+
 
   function minhasconquistas() {
     document.getElementById("paginainicio").style.display = "none"                                  //Conquistas
@@ -118,46 +168,55 @@ function qualities() {
 
   }
 
+  const hoverSound = new Audio("audio/xp-level-up.mp3");
+  hoverSound.volume = 0.3;
+
+  function playHoverSound() {
+      hoverSound.currentTime = 0;
+      hoverSound.play();
+  }
+
   function mostrarc1() {
     document.getElementById("imgconq").src = "img/Conquistas/entreinosesi.jpeg"
     document.getElementById("titleconq").innerText = "Aprovação no SESI Cabo, para Automação Industrial"
-  }
-  function sairc1() {
-    document.getElementById("imgconq").src = ""
-    document.getElementById("titleconq").innerText = ""
+    playHoverSound();
   }
   function mostrarc2() {
     document.getElementById("imgconq").src = "img/Conquistas/passeinoete.jpeg"
     document.getElementById("titleconq").innerText = "Aprovação no ETE, para Desenvolvimento de Sistemas"
-  }
-  function sairc2() {
-    document.getElementById("imgconq").src = ""
-    document.getElementById("titleconq").innerText = ""
+    playHoverSound();
   }
   function mostrarc3() {
     document.getElementById("imgconq").src = "img/Conquistas/certificadosween.jpeg"
-    document.getElementById("titleconq").innerText = "Medalha de prata em matemática"
+    document.getElementById("titleconq").innerText = "Medalha de prata em olimpíada de matemática"
+    playHoverSound();
   }
-  function sairc3() {
-    document.getElementById("imgconq").src = ""
-    document.getElementById("titleconq").innerText = ""
-  } 
   function mostrarc4() {
     document.getElementById("imgconq").src = "img/Conquistas/PAG1.png"
-    document.getElementById("titleconq").innerText = "Conclusão do curso de Algoritmos em Python"
-  }
-  function sairc4() {
-    document.getElementById("imgconq").src = ""
-    document.getElementById("titleconq").innerText = ""
+    document.getElementById("titleconq").innerText = "Conclusão do curso de Algoritmos em Python da AEB"
+    playHoverSound();
   }
   function mostrarc5() {
     document.getElementById("imgconq").src = "img/Conquistas/primeirotreinonacode.jpeg"
-    document.getElementById("titleconq").innerText = "Aprovado no processo seletivo da equipe"
+    document.getElementById("titleconq").innerText = "Aprovado no processo seletivo da equipe CodeTech"
+    playHoverSound();
   }
-  function sairc5() {
-    document.getElementById("imgconq").src = ""
-    document.getElementById("titleconq").innerText = ""
+  function mostrarc6() {
+    document.getElementById("imgconq").src = "img/Conquistas/fotocompremioinovacao.jpeg"
+    document.getElementById("titleconq").innerText = "Conquistamos o prêmio Inovação na OffSeason Pernambuco"
+    playHoverSound();
   }
+  function mostrarc7() {
+    document.getElementById("imgconq").src = "img/Conquistas/aliançaVencedora.jpeg"
+    document.getElementById("titleconq").innerText = "Formamos a primeira Aliança Campeã do Brasil"
+    playHoverSound();
+  }
+  function mostrarc8() {
+    document.getElementById("imgconq").src = "img/Conquistas/premioconexaoregional.jpeg"
+    document.getElementById("titleconq").innerText = "Conquistamos no mesmo regional, o prêmio conexão"
+    playHoverSound();
+  }
+
 
   function escolherdimensao() {                                                                     //Dimensões
     document.getElementById("paginainicio").style.display = "none"
@@ -810,26 +869,26 @@ function mathbim2() {
   document.getElementById("4unidM").style.backgroundColor = "gray"
 }
 function mathbim3() {
-  document.getElementById("fotoatvd2").src = ""
-  document.getElementById("tituloatvd2").innerText = ""
-  document.getElementById("descricaoatvd2").innerText = ""
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/quizTriangulos.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Quiz no Kahoot"
+  document.getElementById("descricaoatvd2").innerText = "Neste dia, respondemos um quiz sobre triângulos e suas propriedades, com o auxílio do app Kahoot."
 
-  document.getElementById("fotoatvd22").src = ""
-  document.getElementById("tituloatvd22").innerText = ""
-  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/triangulosNaEscola.png"
+  document.getElementById("tituloatvd22").innerText = "Triângulos"
+  document.getElementById("descricaoatvd22").innerText = "Essa foi uma atividade no estilo de pesquisa de campo, onde buscamos triângulos em locais do dia a dia."
   document.getElementById("1unidM").style.backgroundColor = "gray"
   document.getElementById("2unidM").style.backgroundColor = "gray"
   document.getElementById("3unidM").style.backgroundColor = "green"
   document.getElementById("4unidM").style.backgroundColor = "gray"
 }
 function mathbim4() {
-  document.getElementById("fotoatvd2").src = ""
-  document.getElementById("tituloatvd2").innerText = ""
-  document.getElementById("descricaoatvd2").innerText = ""
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/pranchaTrigonometrica.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Trigonometria"
+  document.getElementById("descricaoatvd2").innerText = "Nessa aula, o professor Welington levou pra nós uma prancha trigonométrica para compreendermos o assunto."
 
-  document.getElementById("fotoatvd22").src = ""
-  document.getElementById("tituloatvd22").innerText = ""
-  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/atvLivroTrigonometria.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Seno e Cosseno"
+  document.getElementById("descricaoatvd22").innerText = "Nesse dia, o professor passou algumas questões no livro, onde pudemos trabalhar os conceitos aprendidos."
   document.getElementById("1unidM").style.backgroundColor = "gray"
   document.getElementById("2unidM").style.backgroundColor = "gray"
   document.getElementById("3unidM").style.backgroundColor = "gray"
@@ -878,26 +937,26 @@ function lingbim2() {
 }
 
 function lingbim3() {
-  document.getElementById("fotoatvd2").src = ""
-  document.getElementById("tituloatvd2").innerText = ""
-  document.getElementById("descricaoatvd2").innerText = ""
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/resenhaCriticaPreconceitoL.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Marcos Bagno"
+  document.getElementById("descricaoatvd2").innerText = "Nessa atividade, fizemos a leitura de um livro, e logo em seguida uma resenha crítica sobre o mesmo."
 
-  document.getElementById("fotoatvd22").src = ""
-  document.getElementById("tituloatvd22").innerText = ""
-  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/quizInglesKahoot.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Kahoot Bilíngue"
+  document.getElementById("descricaoatvd22").innerText = "Esse foi um quiz sobre conteúdos de inglês, dentre eles, o simple past, que foi trabalhado na unidade."
   document.getElementById("1unidL").style.backgroundColor = "gray"
   document.getElementById("2unidL").style.backgroundColor = "gray"
   document.getElementById("3unidL").style.backgroundColor = "green"
   document.getElementById("4unidL").style.backgroundColor = "gray"
 }
 function lingbim4() {
-  document.getElementById("fotoatvd2").src = ""
-  document.getElementById("tituloatvd2").innerText = ""
-  document.getElementById("descricaoatvd2").innerText = ""
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/interclasse2k26.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Interclasse"
+  document.getElementById("descricaoatvd2").innerText = "O interclasse 2026 foi um evento envolvendo todas as turmas da escola, onde tivemos muitas modalidades esportivas."
 
-  document.getElementById("fotoatvd22").src = ""
-  document.getElementById("tituloatvd22").innerText = ""
-  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/graficosEudes.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Internet no Brasil"
+  document.getElementById("descricaoatvd22").innerText = "Esse foi um trabalho do professor Eudes, onde apresentemos um gráfico e um infográfico sobre a internet no Brasil."
   document.getElementById("1unidL").style.backgroundColor = "gray"
   document.getElementById("2unidL").style.backgroundColor = "gray"
   document.getElementById("3unidL").style.backgroundColor = "gray"
@@ -945,26 +1004,26 @@ function natubim2() {
   document.getElementById("4unidN").style.backgroundColor = "gray"
 }
 function natubim3() {
-  document.getElementById("fotoatvd2").src = ""
-  document.getElementById("tituloatvd2").innerText = ""
-  document.getElementById("descricaoatvd2").innerText = ""
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/circuitoResistores.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Circuitos"
+  document.getElementById("descricaoatvd2").innerText = "Nessa aula, montamos circuitos e observamos a diferença entre paralelo e série."
 
-  document.getElementById("fotoatvd22").src = ""
-  document.getElementById("tituloatvd22").innerText = ""
-  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/fichaCineticaQuimica.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Cinética Química"
+  document.getElementById("descricaoatvd22").innerText = "A partir dessa ficha, trabalhamos conceitos de cinética química e suas aplicações o cotidiano."
   document.getElementById("1unidN").style.backgroundColor = "gray"
   document.getElementById("2unidN").style.backgroundColor = "gray"
   document.getElementById("3unidN").style.backgroundColor = "green"
   document.getElementById("4unidN").style.backgroundColor = "gray"
 }
 function natubim4() {
-  document.getElementById("fotoatvd2").src = ""
-  document.getElementById("tituloatvd2").innerText = ""
-  document.getElementById("descricaoatvd2").innerText = ""
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/podcastBiologia.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Podcast de Biologia"
+  document.getElementById("descricaoatvd2").innerText = "Nessa atividade, eu e Marcos gravamos um podcast falando sobre alguns sistemas do corpo humano."
 
-  document.getElementById("fotoatvd22").src = ""
-  document.getElementById("tituloatvd22").innerText = ""
-  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/pregolab.jpeg"
+  document.getElementById("tituloatvd22").innerText = "PregoLab"
+  document.getElementById("descricaoatvd22").innerText = "Esse foi um trabalho com o objetivo de desenvolver um site simulando um fenômeno da cinética química."
   document.getElementById("1unidN").style.backgroundColor = "greay"
   document.getElementById("2unidN").style.backgroundColor = "gray"
   document.getElementById("3unidN").style.backgroundColor = "gray"
@@ -1016,26 +1075,26 @@ function humabim2() {
   document.getElementById("4unidH").style.backgroundColor = "gray"
 }
 function humabim3() {
-  document.getElementById("fotoatvd2").src = ""
-  document.getElementById("tituloatvd2").innerText = ""
-  document.getElementById("descricaoatvd2").innerText = ""
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/filmeNazista.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Alemanha Nazista"
+  document.getElementById("descricaoatvd2").innerText = "Nessa aula, assistimos um filme sobre a Alemanha nazista, assim pudemos ver como tudo acontecia na realidade."
 
-  document.getElementById("fotoatvd22").src = ""
-  document.getElementById("tituloatvd22").innerText = ""
-  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/regionalizacaoAfricana.jpeg"
+  document.getElementById("tituloatvd22").innerText = "África"
+  document.getElementById("descricaoatvd22").innerText = "Este foi um trabalho proposto pela professora Janaína, onde apresentamos sobre a regionalização e história da África."
   document.getElementById("1unidH").style.backgroundColor = "gray"
   document.getElementById("2unidH").style.backgroundColor = "gray"
   document.getElementById("3unidH").style.backgroundColor = "green"
   document.getElementById("4unidH").style.backgroundColor = "gray"
 }
 function humabim4() {
-  document.getElementById("fotoatvd2").src = ""
-  document.getElementById("tituloatvd2").innerText = ""
-  document.getElementById("descricaoatvd2").innerText = ""
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/eleicaoSimba1.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Eleições Pt.1"
+  document.getElementById("descricaoatvd2").innerText = "Primeiramente, o projeto foi dentro de sala, onde os presidentes apresentaram propostas e o melhor foi eleito."
 
-  document.getElementById("fotoatvd22").src = ""
-  document.getElementById("tituloatvd22").innerText = ""
-  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/eleicaoSimba2.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Eleições Pt.2"
+  document.getElementById("descricaoatvd22").innerText = "Posteriormente, com um candidato eleito em cada turma, houveram campanhas e discursos dos mesmos pela escola."
   document.getElementById("1unidH").style.backgroundColor = "gray"
   document.getElementById("2unidH").style.backgroundColor = "gray"
   document.getElementById("3unidH").style.backgroundColor = "gray"
@@ -1083,26 +1142,26 @@ function senaibim2() {
   document.getElementById("4unidS").style.backgroundColor = "gray"
 }
 function senaibim3() {
-  document.getElementById("fotoatvd2").src = ""
-  document.getElementById("tituloatvd2").innerText = ""
-  document.getElementById("descricaoatvd2").innerText = ""
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/soldagemLCD.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Soldagem de LCD"
+  document.getElementById("descricaoatvd2").innerText = "Nessa aula, o professor Luan nos levou no laboratório de eletrônica para fazer a soldagem de um display LCD."
 
-  document.getElementById("fotoatvd22").src = ""
-  document.getElementById("tituloatvd22").innerText = ""
-  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/instalaçõesPrediais.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Instalações"
+  document.getElementById("descricaoatvd22").innerText = "Nesse dia, fizemos simulações de instalações prediais na bancada do laboratório."
   document.getElementById("1unidS").style.backgroundColor = "gray"
   document.getElementById("2unidS").style.backgroundColor = "gray"
   document.getElementById("3unidS").style.backgroundColor = "green"
   document.getElementById("4unidS").style.backgroundColor = "gray"
 }
 function senaibim4() {
-  document.getElementById("fotoatvd2").src = ""
-  document.getElementById("tituloatvd2").innerText = ""
-  document.getElementById("descricaoatvd2").innerText = ""
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/laboratorioPneumatica.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Pneumática"
+  document.getElementById("descricaoatvd2").innerText = "Nesse dia, visitamos o laboratório de pneumática para conhecer os componentes que serão usados na UC."
 
-  document.getElementById("fotoatvd22").src = ""
-  document.getElementById("tituloatvd22").innerText = ""
-  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/pneumaticaPicuino.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Picuino Sim"
+  document.getElementById("descricaoatvd22").innerText = "Na aula seguinte, fomos ao laboratório de informática para fazer simulações de pneumática virtualmente."
   document.getElementById("1unidS").style.backgroundColor = "gray"
   document.getElementById("2unidS").style.backgroundColor = "gray"
   document.getElementById("3unidS").style.backgroundColor = "gray"
@@ -1163,13 +1222,13 @@ function projbim3() {
   document.getElementById("4unidP").style.backgroundColor = "gray"
 }
 function projbim4() {
-  document.getElementById("fotoatvd2").src = ""
-  document.getElementById("tituloatvd2").innerText = ""
-  document.getElementById("descricaoatvd2").innerText = ""
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/cenaRacista.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Cena de Racismo"
+  document.getElementById("descricaoatvd2").innerText = "Essa foi uma atividade proposta pelo professor Carlos, onde gravamos uma cena envolvendo uma situação de racismo."
 
-  document.getElementById("fotoatvd22").src = ""
-  document.getElementById("tituloatvd22").innerText = ""
-  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/debateVideoRacismo.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Debate"
+  document.getElementById("descricaoatvd22").innerText = "Ainda continuando na ideia do vídeo, debatemos sobre ele e sobre os vídeos dos outros grupos."
   document.getElementById("1unidP").style.backgroundColor = "gray"
   document.getElementById("2unidP").style.backgroundColor = "gray"
   document.getElementById("3unidP").style.backgroundColor = "gray"
@@ -1217,26 +1276,26 @@ function codebim2() {
   document.getElementById("4unidC").style.backgroundColor = "gray"
 }
 function codebim3() {
-  document.getElementById("fotoatvd2").src = ""
-  document.getElementById("tituloatvd2").innerText = ""
-  document.getElementById("descricaoatvd2").innerText = ""
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/offseasonpe.jpeg"
+  document.getElementById("tituloatvd2").innerText = "OffSeason"
+  document.getElementById("descricaoatvd2").innerText = "Na OffSeason, apresentamos nossos projetos e competimos na arena, com o propósito de treinar novos sistemas."
 
-  document.getElementById("fotoatvd22").src = ""
-  document.getElementById("tituloatvd22").innerText = ""
-  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/orgulhoCode.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Orgulho"
+  document.getElementById("descricaoatvd22").innerText = "No Orgulho de ser SESI, a CodeTech apresentou tudo o que desenvolveram na temporada para os pais e visitantes."
   document.getElementById("1unidC").style.backgroundColor = "gray"
   document.getElementById("2unidC").style.backgroundColor = "gray"
   document.getElementById("3unidC").style.backgroundColor = "green"
   document.getElementById("4unidC").style.backgroundColor = "gray"
 }
 function codebim4() {
-  document.getElementById("fotoatvd2").src = ""
-  document.getElementById("tituloatvd2").innerText = ""
-  document.getElementById("descricaoatvd2").innerText = ""
+  document.getElementById("fotoatvd2").src = "img/Atividades2.0/regionalpe.jpeg"
+  document.getElementById("tituloatvd2").innerText = "Regional PE"
+  document.getElementById("descricaoatvd2").innerText = "No Regional de Pernambuco, levamos nosso robô e conquistamos 2 prêmios para a equipe na mesma competição."
 
-  document.getElementById("fotoatvd22").src = ""
-  document.getElementById("tituloatvd22").innerText = ""
-  document.getElementById("descricaoatvd22").innerText = ""
+  document.getElementById("fotoatvd22").src = "img/Atividades2.0/recnplay.jpeg"
+  document.getElementById("tituloatvd22").innerText = "Recn'Play"
+  document.getElementById("descricaoatvd22").innerText = "No Recn'Play, fomos ao Recife antigo apresentar tudo o que construímos desde o início do ano."
   document.getElementById("1unidC").style.backgroundColor = "gray"
   document.getElementById("2unidC").style.backgroundColor = "gray"
   document.getElementById("3unidC").style.backgroundColor = "gray"
@@ -1250,9 +1309,7 @@ function voltardasatv() {
 }
 
 
-
 //============================================================================================================
-
 
 
   function ativarthird() {                                                                        //Terceiro  Ano

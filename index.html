@@ -12,9 +12,19 @@
         <h1 id="enchanted-text">Clique para jogar</h1>
         <div id="intro">
             <video src="video/intro.mp4" id="introvd" paused></video>
-        </div>
-        <div id="overlay"></div>
+        </div> 
+        <div id="overlay"></div> 
+        <div id="cronometro">
+                <div id="arrastar">Cronômetro</div>
+
+                <h2 id="timer">00:00</h2>
+
+                <button class="botaoCronometro" onclick="iniciar()">▶</button>
+                <button class="botaoCronometro" onclick="pausar()">⏸</button>
+                <button class="botaoCronometro"onclick="reiniciar()">↻</button>
+            </div>
         <div id="paginainicio">
+           
             <button id="conquistas" onclick="minhasconquistas()"><img src="https://gamepedia.cursecdn.com/minecraft_gamepedia/b/b0/Potion_of_Slow_Falling.gif?version=6baa08ba1d2047bbe437b6e1e116e123" alt="Poção" width="70px"></button>
             <div id="menuinicial">
             <img src="img/minecraft_title.png" alt="Minecraft" width="900px" id="minecraft">
@@ -33,33 +43,52 @@
             <button id="msc"><img src="img/download-removebg-preview.png" alt="Audio" width="60px" id="icon-musica"></button>
         </div>
         </div>
+        
             <div id="sobremim">
                 <h1 id="titlesobremim"><u>Sobre Mim</u></h1>
-                <div id="whoisme"><p>Eu me chamo Davi Amaral, tenho 17 anos e atualmente estudo no segundo ano do ensino médio no SESI, enquanto também curso Automação Industrial no SENAI. Na casa dos meus pais tem um ponto comercial, onde eu trabalho ajudando eles em diferentes tarefas. No meu tempo livre, costumo trabalhar em projetos pessoais, estudar, praticar esportes ou jogar videogames.</p></div>
-                <div id="goals"><p>Meus objetivos estão relacionados não só ao meu desenvolvimento acadêmico, mas também pessoal. Busco aproveitar as oportunidades de aprendizado para adquirir novos conhecimentos, desenvolver habilidades e me preparar para desafios futuros.<ul style="text-align: left;"><li>Viajar para outro país;</li><li>Atingir a fluência em inglês;</li><li>Cursar faculdade de tecnologia.</li></ul></p></div>
-                <div id="qualities"><p>Ao longo da minha trajetória escolar e dos meus projetos, procurei construir algumas qualidades que considero importantes tanto para o aprendizado quanto para o desenvolvimento pessoal. Acredito que essas características me ajudam a enfrentar desafios e evoluir constantemente.</p><ul style="text-align: left;"><li>Calmo;</li><li>Criativo;</li><li>Proativo;</li><li>Comunicativo.</li></ul></div>
-                <div id="opcoessobremim">
-                    <button id="quemsoueu" class="botao-opcoes-sobremim" onclick="whoisme()">Quem sou eu?</button>
-                    <button id="metas" class="botao-opcoes-sobremim" onclick="goals()">Objetivos</button>
-                    <button id="cualidades" class="botao-opcoes-sobremim" onclick="qualities()">Qualidades</button>
+                <div id="primeiraLinha">
+                    <p id="textoSobreMim">Meu nome é Davi, tenho 17 anos e estudo no 2° ano do ensino médio no SESI, também cursando automação industrial no SENAI. Além disso, atuo como programador em uma equipe de robótica da FIRST, na modalidade FTC.</p>
+                    <img id="carousel-image" src="img/myphoto.jpeg">
                 </div>
-                <img src="img/Atividades2.0/microscopio.jpeg" class="fotosminha" style="top: 63%; left: 4%;">
-                <img src="img/myphoto.jpeg" class="fotosminha" style="top: 63%; right: 4%;">
+                <div id="segundaLinha">
+                    <ul id="listaQualidades"> <h2><u>Qualidades:</u></h2>
+                        <li>Calmo</li>
+                        <li>Criativo</li>
+                        <li>Proativo</li>
+                    </ul>
+                    <ul> <h2><u>Objetivos:</u></h2>
+                        <li>Cursar faculdade de tecnologia</li>
+                        <li>Atingir a fluência em inglês</li>
+                        <li>Viajar para outro país</li>
+                    </ul>
+                </div>
+                 
                 <button id="botaovoltarsm" onclick="voltardosm()" class="return">Retornar</button>
             </div>
+
+
         <div id="minhasconquistas">
-            <h2>Minhas Conquistas:</h2>
-                <img src="img/aprovacaosesi.png" alt="Aprovação no SESI" class="conquista" id="conq1" onmouseover="mostrarc1()" onmouseout="sairc1()">
-                <img  src="img/aprovacaoete.png" alt="Aprovação no ETE" class="conquista" id="conq2" onmouseover="mostrarc2()" onmouseout="sairc2()">
-                <img  src="img/conquistaOSM.png" alt="Medalha de Prata em Matemática" id="conq3" class="conquista" onmouseover="mostrarc3()" onmouseout="sairc3()">
-                <img src="img/cursodepython.png" alt="Curso de Python" id="conq4" class="conquista" onmouseover="mostrarc4()" onmouseout="sairc4()">
-                <img src="img/passeinarobotica.png" alt="Passei na CodeTECH" id="conq5" class="conquista" onmouseover="mostrarc5()" onmouseout="sairc5()">
-                <div id="comprovantedasconquistas">
-                    <h2 id="titleconq">Passe o cursor sobre a conquista para ver mais sobre ela</h2>
-                    <img src="" id="imgconq">
-                </div>
+            <h2 id="tituloConquistas">Conquistas</h2>
+            <div id="quadradoPretoConquistas">
+                <img src="img/linhas.png" id="linhasConquistas">
+                <img src="img/ferro.png" alt="Medalha de Prata" draggable="false" class="iconeConquista" id="conquistaMedalha" onmouseover="mostrarc3()">
+                <img src="img/maçãdourada.png" alt="Entrada na Robótica" draggable="false" class="iconeConquista" id="entradaCode" onmouseover="mostrarc5()">
+                <img src="img/totem.png" alt="Aliança Campeã" draggable="false" class="iconeConquista" id="aliancaCampea" onmouseover="mostrarc7()">
+                <img src="img/livro.png" alt="Passei no ETE" draggable="false" class="iconeConquista" id="passeiETE" onmouseover="mostrarc2()">
+                <img src="img/livropena.png" alt="Passei no SESI" draggable="false" class="iconeConquista" id="passeiSESI" onmouseover="mostrarc1()">
+                <img src="img/redstone.png" alt="Prêmio Conexão" draggable="false" class="iconeConquista" id="premioConnect" onmouseover="mostrarc8()">
+                <img src="img/netherite.png" alt="Prêmio Inovação" draggable="false" class="iconeConquista" id="premioInnovate" onmouseover="mostrarc6()">
+                <img src="img/endereye.png" alt="Curso de Python" draggable="false" class="iconeConquista" id="cursoPython" onmouseover="mostrarc4()">
+            </div>   
             <button id="botaovoltarc" onclick="voltardasc()" class="return">Retornar</button>
+            <div id="comprovantedasconquistas">
+                <h2 id="titleconq">Passe o cursor do mouse sobre os ícones</h1>
+                <img src="" id="imgconq" alt="">
+            </div>
         </div>
+        
+
+
         <div id="opcoes">
             <h1>Por que "Minecraft"?</h1>
             <div id="txtpqm">
@@ -74,10 +103,6 @@
             <div id="quadradonotopodomp">
                 <button class="return" id="voltardomp" onclick="voltardomp()"><</button>
                 <h1>Skins (minhas versões)</h1>
-                <div>
-                    <p id="qtdminecoins">999999 .</p>
-                    <img src="https://tomhmagiccreations.co.uk/wp-content/uploads/2023/10/minecoin.png" alt="Minecoin" id="minecoin">
-                </div>
             </div>
             <div id="containermenudeskins">
             <button id="skin1" class="botoesdeskin" onclick="selectskin1()"><img src="img/Skins/skingratis.png" width="160px"></button>
