@@ -62,7 +62,9 @@ document.getElementById("d3").addEventListener('click', function() {
       });
   });
 
-  const cronometro = document.getElementById("cronometro");
+
+
+const cronometro = document.getElementById("cronometro");                                        //Cronometro
 const barra = document.getElementById("arrastar");
 
 let arrastando = false;
@@ -87,24 +89,27 @@ document.addEventListener("mouseup", () => {
 });
 
 let segundos = 0;
+let milissegundos = 0;
 let intervalo = null;
 
 function atualizarTela() {
-    let minutos = Math.floor(segundos / 60);
-    let seg = segundos % 60;
+    let minutos = Math.floor(milissegundos / 60000);
+    let seg = Math.floor((milissegundos % 60000) / 1000);
+    let miles = milissegundos % 1000;
 
     document.getElementById("timer").innerText =
         String(minutos).padStart(2, '0') + ":" +
-        String(seg).padStart(2, '0');
+        String(seg).padStart(2, '0') + ":" +
+        String(miles).padStart(3, '0');
 }
 
 function iniciar() {
     if (intervalo !== null) return;
 
     intervalo = setInterval(() => {
-        segundos++;
+        milissegundos += 10;
         atualizarTela();
-    }, 1000);
+    }, 10);
 }
 
 function pausar() {
@@ -114,7 +119,7 @@ function pausar() {
 
 function reiniciar() {
     pausar();
-    segundos = 0;
+    milissegundos = 0;
     atualizarTela();
 }
 
